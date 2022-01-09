@@ -8,7 +8,7 @@ services:
     volumes: # Give access to Docker socket.
       - /var/run/docker.sock:/var/run/docker.sock
     environment: # Env variables passed to the Hub process.
-      DOCKER_JUPYTER_IMAGE: jupyterlab/scipy-notebook:1145fb1198b2
+      DOCKER_JUPYTER_IMAGE: jupyter/scipy-notebook
       DOCKER_NETWORK_NAME: ${COMPOSE_PROJECT_NAME}_default
       HUB_IP: jupyterhub_hub
       HOST: ${HOST}
