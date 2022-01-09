@@ -11,6 +11,10 @@ services:
       DOCKER_JUPYTER_IMAGE: jupyterlab_img
       DOCKER_NETWORK_NAME: ${COMPOSE_PROJECT_NAME}_default
       HUB_IP: jupyterhub_hub
+      DOCKER_NOTEBOOK_DIR: /home
+      GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID}
+      GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET}
+      OAUTH_CALLBACK_URL: ${OAUTH_CALLBACK_URL}
       HOST: ${HOST}
     labels: # Traefik configuration.
       - "traefik.enable=true"
